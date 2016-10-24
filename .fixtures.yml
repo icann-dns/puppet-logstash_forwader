@@ -1,6 +1,6 @@
 fixtures:
     symlinks:
-      logstash_forwader: "#{source_dir}"
+      logstash_forwarder: "#{source_dir}"
     repositories:
       tea:
         repo: https://github.com/icann-dns/puppet-tea.git

@@ -26,7 +26,7 @@ class logstash_forwarder (
     ensure => absent;
   $conf_file:
     content => template('logstash_forwarder/logstash-forwarder.erb'),
-    notify  => Service['logstash-forwarder'],
+    notify  => Service[$service_name],
     require => Package['logstash-forwarder'];
   }
   service {$service_name:

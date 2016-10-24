@@ -8,5 +8,5 @@ class logstash_forwarder::params {
   $logstash_cert_dir = $::kernel ? {
     default   => '/etc/ssl/certs',
     'FreeBSD' => '/etc/ssl',
-  } 
+  }
 }

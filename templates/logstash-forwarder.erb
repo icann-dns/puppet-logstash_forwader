@@ -1,0 +1,29 @@
+{
+  "network": {
+  "servers": [ "<%= @logstash_server %>:<%= @logstash_port %>" ],
+    "timeout": 15,
+    "ssl ca": "<%= @logstash_cert %>"
+  },
+  "files": [
+<%- if @syslog_enable -%>
+    {
+      "paths": [ "<%= @syslog_file %>" ],
+      "fields": { "type": "syslog" }
+    }<%- if @files.any? -%>,<%- end %>
+<%- end -%>
+<%- @files.each do |file| -%>
+    {
+      "paths": [
+  <%- file['paths'].each do |path| -%>
+        "<%= path %>"<%- if path != file['paths'].last -%>,<%- end %>
+  <%- end -%>
+       ],
+      "fields": { 
+  <% file['fields'].each_with_index do |(field, value), index| -%>
+        "<%= field %>": "<%= value %>"<%- if index < file['fields'].length - 1 -%>,<%- end %>
+      }
+  <%- end -%>
+    }<%- if file != @files.last -%>,<%- end %>
+<%- end -%>
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "icann-logstash_forwader",
+  "version": "0.1.1",
+  "author": "john.bond@icann.org",
+  "summary": "Module to configure logstash_forwarder",
+  "license": "Apache-2.0",
+  "source": "https://github.com/icann-dns/puppet-logstash_forwader",
+  "project_page": "https://github.com/icann-dns/puppet-logstash_forwader",
+  "issues_url": "https://github.com/icann-dns/puppet-logstash_forwader/issues",
+  "dependencies": [
+    {"name":"icann-tea","version_requirement":">= 0.2.5"}
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem" : "Ubuntu",
+      "operatingsystemrelease" : [ "12.04", "14.04" ]
+    },
+    {
+      "operatingsystem" : "FreeBSD",
+      "operatingsystemrelease" : [ "10" ]
+    }
+  ]
+}

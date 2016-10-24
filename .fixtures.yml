@@ -1,0 +1,14 @@
+fixtures:
+    symlinks:
+      logstash_forwader: "#{source_dir}"
+    repositories:
+      tea:
+        repo: https://github.com/icann-dns/puppet-tea.git
+        ref: v0.2.5
+      stdlib:
+        repo: https://github.com/puppetlabs/puppetlabs-stdlib.git
+        ref: 4.12.0
+      logrotate:
+        repo: https://github.com/icann-dns/puppet-logrotate.git
+        ref: v1.4.0-ICANN-1
+    forge_modules:

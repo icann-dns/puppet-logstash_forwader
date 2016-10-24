@@ -37,7 +37,7 @@ deploy:
     branch: ha-bug-puppet-forge
   user: icann
   password:
-    secure: ""
+    secure: "p/Vdv+dCvVm3AkbvMeEzFjGAiNATvnaqVvtB266ZcwWdtdPXfs7oqknFl7FpS6AXL5/sGlaT0dmLf+scaBj8CvDVxmwo7P7R41Volug7/uAdb8bhfF6HuhfTARAo4MGP4JpuY7hBDLDfkkI9uD7sIrnFgoYlGXhJVdi2+RbrN553kXHjd6OcynT3qA46Rwx+PJvyJU5p8ttBohR9FyfYPHLsK+ZwhnDbOW7DU5v4sgIZa3jAK8hvKQM+/jogZOpGdXINuXhiHCFbPnH5oFSQBVbPoJ6cnPh8NIkJUb7Up9ku2yhs/1ajjlRXdWD/QM2WrjETsJ4yZzSLAv2QvMsNsKRI7nXZrU8dhiEyajd12RMGzsyd8b6emEZ/7DRflMPgIWNenYQgwYCnl6G09xem/0Fc0vCgoXTJ/ORYyhVGEw78UlR+6EALADYOO+XE5yZnCQTluX15bUTQ0PysOiCeKXA8jGwldSy7+FyytNH6Hbx0d99MyhtxpjR69/t8AdNzYTiT0I2LMptekYtDHL2KE//sAznKsno9EqCYoNRgntvIUNPzdQeS/kvLMxj/gXlf2KEI66YsL1oLrZN2gILuQy+jkaZnkgX0TW0KFSY+qIh9iQ69vGo+z0zVAC03uT1e6NB8kFiMH7IwfJj8VPEwoQ8xUbJYrD93ITtmzuwl3a4="
   on:
     tags: true
     # all_branches is required to use tags

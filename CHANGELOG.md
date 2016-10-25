@@ -1,3 +1,7 @@
+## 2016-10-24 - Release 0.1.2
+### Summary
+* Add new type Logstash_forwarder::File to validate the files array
+
 ## 2016-10-24 - Release 0.1.1
 ### Summary
 * Correct module metadata

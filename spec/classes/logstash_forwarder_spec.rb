@@ -266,9 +266,20 @@ describe 'logstash_forwarder' do
           end
         end
         context 'files' do
-          before { params.merge!(files: {}) }
+          before do
+            params.merge!(
+              files: [{
+                'fields' => { 'type' => 'web' },
+                'paths'  => ['/foo/bar']
+              }]
+            )
+          end
           it { is_expected.to compile }
-          # Add Check to validate change was successful
+          it do
+            is_expected.to contain_file(conf_file).with_content(
+              %r{"paths":\s\[\s*"/foo/bar"\s*\],\s*"fields":\s\{\s*"type":\s"web"}
+            )
+          end
         end
       end
       describe 'check bad type' do
@@ -320,7 +331,11 @@ describe 'logstash_forwarder' do
           before { params.merge!(logstash_cert_dir: true) }
           it { expect { subject.call }.to raise_error(Puppet::Error) }
         end
-        context 'files' do
+        context 'files array' do
+          before { params.merge!(files: [{ 'foo' => 'bar' }]) }
+          it { expect { subject.call }.to raise_error(Puppet::Error) }
+        end
+        context 'files bool' do
           before { params.merge!(files: true) }
           it { expect { subject.call }.to raise_error(Puppet::Error) }
         end

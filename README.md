@@ -79,7 +79,7 @@ Main class
 * `logrotate_size` (String, Default: '100M'): how large a file is allowed to be before its rotated
 * `conf_file` (Tea::Absolutepath, Default: os specific): location of the logstash forwader config file
 * `logstash_cert_dir` (Tea::Absolutepath, Default: os specific): location where to store the logstash public certificate
-* `files` (Hash, default: {}): hash of files to manage
+* `files` (Array[Logstash_forwarder::File), default: undef): An array of hashes. Each hash tells what paths to watch and what fields to annotate on events from those paths (https://github.com/elastic/logstash-forwarder).
 
 ## Limitations
 

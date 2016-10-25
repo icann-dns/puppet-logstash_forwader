@@ -13,7 +13,7 @@ class logstash_forwarder (
   String            $logrotate_size       = '100M',
   Tea::Absolutepath $conf_file            = $::logstash_forwarder::params::conf_file,
   Tea::Absolutepath $logstash_cert_dir    = $::logstash_forwarder::params::logstash_cert_dir,
-  Hash              $files                = {}
+  Optional[Array[Logstash_forwarder::File]] $files  = undef
 ) inherits logstash_forwarder::params {
 
   $syslog_line = "${syslog_pattern} ${syslog_file}"

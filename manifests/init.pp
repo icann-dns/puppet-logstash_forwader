@@ -36,6 +36,10 @@ class logstash_forwarder (
   }
   case $::kernel {
     default: {
+      file {'/var/lib/logstash-forwarder':
+        ensure => directory,
+        chmod  => '0750',
+      }
       if $syslog_enable {
         file {'/etc/rsyslog.d/logstash.conf':
           ensure  => present,

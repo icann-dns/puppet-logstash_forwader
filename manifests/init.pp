@@ -38,7 +38,7 @@ class logstash_forwarder (
     default: {
       file {'/var/lib/logstash-forwarder':
         ensure => directory,
-        chmod  => '0750',
+        mode   => '0750',
       }
       if $syslog_enable {
         file {'/etc/rsyslog.d/logstash.conf':

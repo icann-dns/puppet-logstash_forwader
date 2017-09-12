@@ -1,3 +1,7 @@
+## 2016-11-12 - Release 0.1.4
+### Summary
+* Fix typo
+
 ## 2016-11-12 - Release 0.1.3
 ### Summary
 * Manage logstash user permissions and secure it a bit
